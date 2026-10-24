@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.send('Queue Monitor is running');
 });
 
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
